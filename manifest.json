@@ -1,16 +1,30 @@
 {
 	"initial": [
-		"./js/egret.min_f1f027d7.js",
-		"./js/egret.web.min_2dd0bd72.js",
-		"./js/eui.min_4f767512.js",
-		"./js/assetsmanager.min_70d22011.js",
-		"./js/tween.min_6c5a88f9.js",
-		"./js/promise.min_83a6a5d.js",
-		"./js/game.min_45aa06f6.js",
-		"./js/egretad.min_528ec4e7.js"
+		"libs/modules/egret/egret.js",
+		"libs/modules/egret/egret.web.js",
+		"libs/modules/eui/eui.js",
+		"libs/modules/assetsmanager/assetsmanager.js",
+		"libs/modules/tween/tween.js",
+		"libs/modules/promise/promise.js",
+		"libs/modules/game/game.js",
+		"libs/egretad/bin/egretad.js"
 	],
 	"game": [
-		"./js/default.thm_f1875be9.js",
-		"./js/main.min_1a507af6.js"
+		"bin-debug/containers/GameEndPanel.js",
+		"bin-debug/Main.js",
+		"bin-debug/components/Buttons.js",
+		"bin-debug/components/Dialog.js",
+		"bin-debug/components/Msg.js",
+		"bin-debug/components/SkinDialog.js",
+		"bin-debug/components/TimberMask.js",
+		"bin-debug/components/TimberMaskSprite.js",
+		"bin-debug/components/Bottom.js",
+		"bin-debug/containers/GamePlayingPanel.js",
+		"bin-debug/containers/GameStartPanel.js",
+		"bin-debug/tools/AssetAdapter.js",
+		"bin-debug/tools/LoadingUI.js",
+		"bin-debug/tools/Platform.js",
+		"bin-debug/tools/ThemeAdapter.js",
+		"bin-debug/tools/Tools.js"
 	]
 }
