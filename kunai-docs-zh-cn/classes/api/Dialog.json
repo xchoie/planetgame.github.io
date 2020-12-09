@@ -1,0 +1,110 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "GO_HOME",
+			"memberof": "Dialog",
+			"scope": "static",
+			"pType": "public",
+			"default": "'gohome'"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "NOCHANCE",
+			"memberof": "Dialog",
+			"scope": "static",
+			"pType": "public",
+			"default": "'nochance'"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "REBIRTH",
+			"memberof": "Dialog",
+			"scope": "static",
+			"pType": "public",
+			"default": "'rebirth'"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "RESTART",
+			"memberof": "Dialog",
+			"scope": "static",
+			"pType": "public",
+			"default": "'restart'"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "SHARE_WX",
+			"memberof": "Dialog",
+			"scope": "static",
+			"pType": "public",
+			"default": "'sharewx'"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "VIEW_AD",
+			"memberof": "Dialog",
+			"scope": "static",
+			"pType": "public",
+			"default": "'viewad'"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "_height",
+			"memberof": "Dialog",
+			"scope": "instance",
+			"pType": "protected",
+			"default": "400"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "_width",
+			"memberof": "Dialog",
+			"scope": "instance",
+			"pType": "protected",
+			"default": "280"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "Dialog",
+			"memberof": "Dialog",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "setScores",
+			"memberof": "Dialog",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "text",
+					"type": "string",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Dialog",
+		"memberof": "",
+		"filename": "components\\Dialog.ts",
+		"description": "游戏结束弹窗",
+		"augments": []
+	},
+	"pType": "public"
+}

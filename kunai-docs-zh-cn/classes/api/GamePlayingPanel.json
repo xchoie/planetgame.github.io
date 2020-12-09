@@ -1,0 +1,89 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "GAME_END",
+			"memberof": "GamePlayingPanel",
+			"scope": "static",
+			"pType": "public",
+			"default": "'gameend'"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "GAME_RESTART",
+			"memberof": "GamePlayingPanel",
+			"scope": "static",
+			"pType": "public",
+			"default": "'gamerestart'"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "kunaiH",
+			"memberof": "GamePlayingPanel",
+			"scope": "instance",
+			"pType": "public",
+			"default": "100"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "kunaiW",
+			"memberof": "GamePlayingPanel",
+			"scope": "instance",
+			"pType": "public",
+			"default": "21"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "GamePlayingPanel",
+			"memberof": "GamePlayingPanel",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "end",
+			"memberof": "GamePlayingPanel",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "initGame",
+			"memberof": "GamePlayingPanel",
+			"scope": "instance",
+			"description": "创建场景界面Create scene interface",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "start",
+			"memberof": "GamePlayingPanel",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "mode",
+					"type": "number",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "GamePlayingPanel",
+		"memberof": "",
+		"filename": "containers\\GamePlayingPanel.ts",
+		"description": "游戏进行中的界面",
+		"augments": []
+	},
+	"pType": "public"
+}

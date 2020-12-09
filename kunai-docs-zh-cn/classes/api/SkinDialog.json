@@ -1,0 +1,51 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "CLOSE_SKIN",
+			"memberof": "SkinDialog",
+			"scope": "static",
+			"pType": "public",
+			"default": "'closeskin'"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "_height",
+			"memberof": "SkinDialog",
+			"scope": "instance",
+			"pType": "protected",
+			"default": "400"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "_width",
+			"memberof": "SkinDialog",
+			"scope": "instance",
+			"pType": "protected",
+			"default": "300"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "SkinDialog",
+			"memberof": "SkinDialog",
+			"scope": "instance",
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "SkinDialog",
+		"memberof": "",
+		"filename": "components\\SkinDialog.ts",
+		"description": "皮肤切换窗口",
+		"augments": []
+	},
+	"pType": "public"
+}

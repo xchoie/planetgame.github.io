@@ -1,0 +1,47 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "GAME_RESTART",
+			"memberof": "GameEndPanel",
+			"scope": "static",
+			"pType": "public",
+			"default": "'gamerestart'"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "GameEndPanel",
+			"memberof": "GameEndPanel",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "end",
+			"memberof": "GameEndPanel",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "start",
+			"memberof": "GameEndPanel",
+			"scope": "instance",
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "GameEndPanel",
+		"memberof": "",
+		"filename": "containers\\GameEndPanel.ts",
+		"description": "游戏结束画面，未用到",
+		"augments": []
+	},
+	"pType": "public"
+}

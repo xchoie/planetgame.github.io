@@ -1,0 +1,78 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "height",
+			"memberof": "Buttons",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "width",
+			"memberof": "Buttons",
+			"scope": "instance",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "Buttons",
+			"memberof": "Buttons",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "init",
+			"memberof": "Buttons",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "type",
+					"type": "number",
+					"default": "1",
+					"description": ""
+				},
+				{
+					"name": "text",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "size",
+					"type": "number",
+					"default": "24",
+					"description": ""
+				},
+				{
+					"name": "width",
+					"type": "number",
+					"default": "180",
+					"description": ""
+				},
+				{
+					"name": "height",
+					"type": "number",
+					"default": "64",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Buttons",
+		"memberof": "",
+		"filename": "components\\Buttons.ts",
+		"description": "创建不同颜色的button",
+		"augments": []
+	},
+	"pType": "public"
+}

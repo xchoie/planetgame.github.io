@@ -1,0 +1,34 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "generateRandom",
+			"memberof": "Tools",
+			"scope": "static",
+			"params": [
+				{
+					"name": "start",
+					"type": "number",
+					"description": ""
+				},
+				{
+					"name": "end",
+					"type": "number",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Tools",
+		"memberof": "",
+		"filename": "tools\\Tools.ts"
+	},
+	"pType": "public"
+}

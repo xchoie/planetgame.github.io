@@ -1,0 +1,177 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"name": "openDataContext",
+			"memberof": "DebugPlatform",
+			"scope": "instance",
+			"pType": "public",
+			"default": "{\n    postMessage: (): void => {},\n    createDisplayObject: (): void => {}\n  }"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "clearData",
+			"memberof": "DebugPlatform",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "func",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "getData",
+			"memberof": "DebugPlatform",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "key",
+					"type": "any",
+					"description": ""
+				},
+				{
+					"name": "func",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "getUserInfo",
+			"memberof": "DebugPlatform",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "login",
+			"memberof": "DebugPlatform",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "openMini",
+			"memberof": "DebugPlatform",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "obj",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "removeData",
+			"memberof": "DebugPlatform",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "key",
+					"type": "any",
+					"description": ""
+				},
+				{
+					"name": "func",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "removeUserCloudStorage",
+			"memberof": "DebugPlatform",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "ary",
+					"type": "string[]",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "scopeUserInfo",
+			"memberof": "DebugPlatform",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "setData",
+			"memberof": "DebugPlatform",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "data",
+					"type": "any",
+					"description": ""
+				},
+				{
+					"name": "func",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "setUserCloudStorage",
+			"memberof": "DebugPlatform",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "obj",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "share",
+			"memberof": "DebugPlatform",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "func",
+					"question": true,
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "DebugPlatform",
+		"memberof": "",
+		"filename": "tools\\Platform.ts",
+		"implements": [
+			{
+				"name": "Platform"
+			}
+		]
+	},
+	"pType": "public"
+}

@@ -1,0 +1,89 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"name": "FRIENDS_RANK",
+			"memberof": "Bottom",
+			"scope": "static",
+			"pType": "public",
+			"default": "'friendsrank'"
+		},
+		{
+			"kind": "member",
+			"name": "GROUP_RANK",
+			"memberof": "Bottom",
+			"scope": "static",
+			"pType": "public",
+			"default": "'grouprank'"
+		},
+		{
+			"kind": "member",
+			"name": "SKIN",
+			"memberof": "Bottom",
+			"scope": "static",
+			"pType": "public",
+			"default": "'skin'"
+		},
+		{
+			"kind": "member",
+			"name": "WORLD_RANK",
+			"memberof": "Bottom",
+			"scope": "static",
+			"pType": "public",
+			"default": "'worldrank'"
+		},
+		{
+			"kind": "member",
+			"name": "ZAN",
+			"memberof": "Bottom",
+			"scope": "static",
+			"pType": "public",
+			"default": "'ZAN'"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "_width",
+			"memberof": "Bottom",
+			"scope": "instance",
+			"pType": "protected",
+			"default": "1000"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "height",
+			"memberof": "Bottom",
+			"scope": "instance",
+			"pType": "public",
+			"default": "100"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "Bottom",
+			"memberof": "Bottom",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"name": "init",
+			"memberof": "Bottom",
+			"scope": "instance",
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Bottom",
+		"memberof": "",
+		"filename": "components\\Bottom.ts",
+		"description": "首页底部",
+		"augments": []
+	},
+	"pType": "public"
+}
