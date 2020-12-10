@@ -145,6 +145,10 @@
     }
 
     window.getList = function() {
+        console.log('document.getElementById', document.getElementById('list'))
+        if (document.getElementById('list')) {
+            return
+        }
         // 上传分数
         getScoreList()
         console.log('res', scoreList)
@@ -156,7 +160,7 @@
         div.style.justifyContent = 'center'
         div.style.width = '100%'
         div.style.top = '320px'
-        div.innerHTML = `<div onclick="hideList()" class="div-list">${generateList(scoreList)}</div>`
+        div.innerHTML = `<div class="div-list">${generateList(scoreList)}</div>`
         document.body.appendChild(div)
     }
     window.hideList = function() {

@@ -63,7 +63,7 @@ class Dialog extends egret.Sprite {
     homeBtn.x = 30
     homeBtn.y = 300
     homeBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-                  window.hideList()
+      window.hideList()
       this.dispatchEventWith(Dialog.GO_HOME)
     }, this)
 
