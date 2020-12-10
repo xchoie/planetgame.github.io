@@ -15,6 +15,27 @@ var GameStartPanel = (function (_super) {
     __extends(GameStartPanel, _super);
     function GameStartPanel() {
         var _this = _super.call(this) || this;
+        _this.currentTime = Date.now();
+        _this.diffTime = 1607673600000 - Date.now();
+        _this.func = function () {
+            setInterval(function () {
+                _this.diffTime = _this.diffTime - 1000;
+                var dayDiff = Math.floor(_this.diffTime / (24 * 3600 * 1000)); //计算出相差天数
+                var leave1 = _this.diffTime % (24 * 3600 * 1000); //计算天数后剩余的毫秒数
+                var hours = Math.floor(_this.diffTime / (3600 * 1000)); //计算出小时数
+                // //计算相差分钟数
+                var leave2 = leave1 % (3600 * 1000); //计算小时数后剩余的毫秒数
+                var minutes = Math.floor(leave2 / (60 * 1000)); //计算相差分钟数
+                // //计算相差秒数
+                var leave3 = leave2 % (60 * 1000); //计算分钟数后剩余的毫秒数
+                var seconds = Math.round(leave3 / 1000);
+                // let leave4=leave3%(60*1000)   //计算分钟数后剩余的毫秒数
+                // let minseconds=Math.round(leave4/1000)
+                _this.textFieldHour.text = String(hours);
+                _this.textFieldMinute.text = String(minutes);
+                _this.textFieldSecond.text = String(seconds);
+            }, 1000);
+        };
         _this.isdisplay = false;
         _this.init();
         return _this;
@@ -27,9 +48,8 @@ var GameStartPanel = (function (_super) {
         logo.x = stage.stageWidth / 2 - logo.width / 2;
         logo.y = -logo.height;
         egret.Tween.get(logo).to({ y: 40 }, 500, egret.Ease.bounceOut);
-        console.log('startBtn', startBtn);
         startBtn.x = -startBtn.width;
-        startBtn.y = 650;
+        startBtn.y = 610;
         startBtn.touchEnabled = true;
         startBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             _this.onTouchTap(1);
@@ -58,6 +78,12 @@ var GameStartPanel = (function (_super) {
         // bottom.y = stage.stageHeight
         // egret.Tween.get(bottom).to({ y: stage.stageHeight - bottom.height }, 500, egret.Ease.bounceOut)
     };
+    // private sso = new SSO({
+    // env: 'dev',
+    // appKey: SSO_APP_KEY,
+    // })
+    // private getAccesstoken() {
+    // }
     GameStartPanel.prototype.init = function () {
         var stage = egret.MainContext.instance.stage;
         var img = new egret.Bitmap();
@@ -76,6 +102,51 @@ var GameStartPanel = (function (_super) {
         this.startBtn = new Buttons();
         this.addChild(this.startBtn);
         this.startBtn.init(1, '立即免费拿');
+        this.textFieldHour = new egret.TextField();
+        this.addChild(this.textFieldHour);
+        this.textFieldHour.x = -137;
+        this.textFieldHour.y = 492;
+        this.textFieldHour.width = 480;
+        this.textFieldHour.height = 100;
+        this.textFieldHour.textAlign = "center";
+        this.textFieldHour.textColor = 0xEB3226;
+        this.textFieldHour.strokeColor = 0xEB3226;
+        this.textFieldHour.stroke = 1;
+        this.textFieldMinute = new egret.TextField();
+        this.addChild(this.textFieldMinute);
+        this.textFieldMinute.x = -32;
+        this.textFieldMinute.y = 492;
+        this.textFieldMinute.width = 480;
+        this.textFieldMinute.height = 100;
+        this.textFieldMinute.textAlign = "center";
+        this.textFieldMinute.textColor = 0xEB3226;
+        this.textFieldMinute.strokeColor = 0xEB3226;
+        this.textFieldMinute.stroke = 1;
+        this.textFieldSecond = new egret.TextField();
+        this.addChild(this.textFieldSecond);
+        this.textFieldSecond.x = 75;
+        this.textFieldSecond.y = 492;
+        this.textFieldSecond.width = 480;
+        this.textFieldSecond.height = 100;
+        this.textFieldSecond.textAlign = "center";
+        this.textFieldSecond.textColor = 0xEB3226;
+        this.textFieldSecond.strokeColor = 0xEB3226;
+        this.textFieldSecond.stroke = 1;
+        var dayDiff = Math.floor(this.diffTime / (24 * 3600 * 1000)); //计算出相差天数
+        var leave1 = this.diffTime % (24 * 3600 * 1000); //计算天数后剩余的毫秒数
+        var hours = Math.floor(this.diffTime / (3600 * 1000)); //计算出小时数
+        // //计算相差分钟数
+        var leave2 = leave1 % (3600 * 1000); //计算小时数后剩余的毫秒数
+        var minutes = Math.floor(leave2 / (60 * 1000)); //计算相差分钟数
+        // //计算相差秒数
+        var leave3 = leave2 % (60 * 1000); //计算分钟数后剩余的毫秒数
+        var seconds = Math.round(leave3 / 1000);
+        // let leave4=leave3%(60*1000)   //计算分钟数后剩余的毫秒数
+        // let minseconds=Math.round(leave4/1000)
+        this.textFieldHour.text = String(hours);
+        this.textFieldMinute.text = String(minutes);
+        this.textFieldSecond.text = String(seconds);
+        this.func();
         // this.startPK = new Buttons()
         // this.addChild(this.startPK)
         // this.startPK.init(4, '疯狂模式')
@@ -108,6 +179,7 @@ var GameStartPanel = (function (_super) {
         // mode1：简单
         // mode2：疯狂
         if (mode === 1) {
+            // window.getList()
             this.dispatchEventWith(GameStartPanel.GAME_START_1);
         }
         else if (mode === 2) {

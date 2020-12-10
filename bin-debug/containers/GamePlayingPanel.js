@@ -191,8 +191,6 @@ var GamePlayingPanel = (function (_super) {
                         this.createKunai(this.generateRandomElement());
                         this.createKunaiNum();
                         this.createScores();
-                        // 创建分享及广告
-                        this.share();
                         return [2 /*return*/];
                 }
             });
@@ -610,6 +608,8 @@ var GamePlayingPanel = (function (_super) {
                 this.dialog.addEventListener(Dialog.NOCHANCE, function () {
                     _this.noChance();
                 }, this);
+                // 上传分数
+                window.setScores(this.scores.text);
                 obj = {
                     key: "score",
                     value: this.scores.text,

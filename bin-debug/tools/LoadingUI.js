@@ -53,6 +53,9 @@ var LoadingUI = (function (_super) {
     };
     LoadingUI.prototype.onProgress = function (current, total) {
         this.textField.text = "Loading..." + current + "/" + total;
+        if (current === total) {
+            this.textField.parent.removeChild(this.textField);
+        }
     };
     return LoadingUI;
 }(egret.Sprite));

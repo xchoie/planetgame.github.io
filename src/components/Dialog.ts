@@ -1,6 +1,12 @@
 /**
  * 游戏结束弹窗
  */
+
+interface Window {
+  getList: any
+  setScores: any
+  hideList: any
+}
 class Dialog extends egret.Sprite {
   constructor() {
     super()
@@ -25,6 +31,14 @@ class Dialog extends egret.Sprite {
   private shareBtn: Buttons
   private adBtn: Buttons
   private scores: egret.TextField
+  private avator: egret.Bitmap;
+
+    private createBitmapByName(name: string): egret.Bitmap {
+    let result = new egret.Bitmap();
+    let texture: egret.Texture = RES.getRes(name);
+    result.texture = texture;
+    return result;
+  }
 
   private async init () {
     let { maskBlack, tip, homeBtn, restartBtn, shareBtn, adBtn } = this
@@ -49,6 +63,7 @@ class Dialog extends egret.Sprite {
     homeBtn.x = 30
     homeBtn.y = 300
     homeBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+                  window.hideList()
       this.dispatchEventWith(Dialog.GO_HOME)
     }, this)
 
@@ -60,18 +75,22 @@ class Dialog extends egret.Sprite {
     restartBtn.scaleX = .5
     restartBtn.scaleY = .5
     restartBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+      window.hideList()
       this.dispatchEventWith(Dialog.RESTART)
     }, this)
 
     shareBtn = new Buttons()
-    shareBtn.init(2, '炫耀战绩')
+    shareBtn.init(2, '查看排行榜')
     this.addChild(shareBtn)
     shareBtn.x = 30
     shareBtn.y = 350
     shareBtn.scaleX = .5
     shareBtn.scaleY = .5
     shareBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-      platform.share()
+      // platform.share() 
+      this.removeChild(this.avator)
+      this.removeChild(nickname)
+      window.getList()
     }, this)
 
     adBtn = new Buttons()
@@ -82,6 +101,7 @@ class Dialog extends egret.Sprite {
     adBtn.scaleX = .5
     adBtn.scaleY = .5
     adBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+      window.hideList()
       const date = new Date()
       const key = `${date.getFullYear()}${date.getMonth()}${date.getDate()}`
       const that = this
@@ -110,29 +130,35 @@ class Dialog extends egret.Sprite {
     this.scores.y = 40
     this.scores.x = this._width / 2 -this.scores.width / 2
     this.addChild(this.scores)
-    const data = await platform.getUserInfo()
-    console.log(111, data)
+    // const data = await platform.getUserInfo()
+    // console.log(111, data)
     const that = this
-    const url = data.avatarUrl
-    const imgLoader = new egret.ImageLoader()
-    imgLoader.crossOrigin = ''
-    imgLoader.load(url)
-    imgLoader.once(egret.Event.COMPLETE, (e: egret.Event) => {
-      if (e.currentTarget.data) {
-        const texture = new egret.Texture()
-        texture.bitmapData = e.currentTarget.data
-        const img = new egret.Bitmap(texture)
-        img.width = 100
-        img.height = 100
-        that.addChild(img)
-        img.x = that._width / 2 - img.width / 2
-        img.y = 100
-      }
-    }, this)
+    this.avator = this.createBitmapByName("planet4_png");
+    this.addChild(this.avator);
+    this.avator.width = 100;
+    this.avator.height = 100;
+    this.avator.x = that._width / 2 - this.avator.width / 2
+    this.avator.y = 100
+    // const url = data.avatarUrl
+    // const imgLoader = new egret.ImageLoader()
+    // imgLoader.crossOrigin = ''
+    // imgLoader.load(url)
+    // imgLoader.once(egret.Event.COMPLETE, (e: egret.Event) => {
+    //   if (e.currentTarget.data) {
+    //     const texture = new egret.Texture()
+    //     texture.bitmapData = e.currentTarget.data
+    //     const img = new egret.Bitmap(texture)
+    //     img.width = 100
+    //     img.height = 100
+    //     that.addChild(img)
+    //     img.x = that._width / 2 - img.width / 2
+    //     img.y = 100
+    //   }
+    // }, this)
     const nickname: egret.TextField = new egret.TextField()
     nickname.size = 14
     nickname.textColor = 0xffffff
-    nickname.text = data.nickName
+    nickname.text = localStorage.getItem('chineseName')
     nickname.x = this._width / 2 - nickname.width /2
     nickname.y = 220
     this.addChild(nickname)
@@ -141,6 +167,6 @@ class Dialog extends egret.Sprite {
 
   public setScores(text: string) {
     this.scores.text = `${text}`
-    this.scores.x = this._width / 2 -this.scores.width / 2
+    this.scores.x = this._width / 2 - this.scores.width / 2
   }
 }

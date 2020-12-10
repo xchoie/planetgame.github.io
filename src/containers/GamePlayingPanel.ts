@@ -181,7 +181,7 @@ class GamePlayingPanel extends egret.Sprite {
     this.createScores();
 
     // 创建分享及广告
-    this.share();
+    // this.share();
   }
   /**
    * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
@@ -642,6 +642,9 @@ class GamePlayingPanel extends egret.Sprite {
       },
       this
     );
+
+    // 上传分数
+    window.setScores(this.scores.text)
 
     // 上传到云
     const obj = {
